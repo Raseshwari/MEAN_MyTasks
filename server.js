@@ -16,6 +16,7 @@ app.engine('html', require('ejs').renderFile);
 
 //set static folder for angular stuff
 app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 //body-parser middleware
 app.use(bodyParser.json());
