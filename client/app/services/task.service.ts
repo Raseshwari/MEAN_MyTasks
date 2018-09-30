@@ -24,4 +24,11 @@ export class TaskService{
         return this.http.delete('/api/tasks/'+id)
         .map(function (res) { return res.json(); });
     }
+
+    updateStatus(task){
+        var headers =  new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.put('/api/tasks/'+task._id, JSON.stringify(task), {headers: headers})
+        .map(function (res) { return res.json(); });
+    }
 }
