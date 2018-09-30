@@ -15,4 +15,4 @@ PUT /tasks/:id - this route finds an existing task by its id and lets you update
 
 DEL /tasks/:id - this route lets you delete a tasks by its id
 
-Currently updating the user authentication and that is yet to be deployed on heroku. All the changes made to this API are validated using Postman.
+Currently in process of deploying this app to Heroku.
