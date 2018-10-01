@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Sample of how easy and fast to start hacking with Angular2 and ng2-bootstrap",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "postinstall": "bower install",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" node server.js",
+    "postinstall": "ng build --aot -prod",
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "2.4.4",
     "@angular/router": "3.4.4",
     "@angular/upgrade": "2.4.4",
+    "@angular/cli" : "1.4.9",
+    "@angular/compiler-cli":"^4.4.6",
     "angular2-in-memory-web-api": "0.0.21",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
@@ -28,12 +30,17 @@
     "rxjs": "5.0.3",
     "systemjs": "0.20.0",
     "zone.js": "0.7.6",
-    "bower": "^1.7.2"
+    "bower": "^1.7.2",
+    "typescript": "2.1.5"
   },
   "devDependencies": {
     "concurrently": "3.1.0",
     "lite-server": "^2.2.0",
     "typescript": "2.1.5"
+  },
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
   },
   "repository": {}
 }
